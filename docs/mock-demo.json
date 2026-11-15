@@ -1,0 +1,108 @@
+{
+  "mode": "MOCKED: no real posts or external network requests",
+  "request": {
+    "message": "Grow your online visibility. https://example.com"
+  },
+  "scenarios": {
+    "all_success": {
+      "success": true,
+      "results": [
+        {
+          "platform": "Mastodon",
+          "status": "success",
+          "posted_url": "https://mastodon.example/@tester/123",
+          "public_access": true,
+          "date": "2026-11-15",
+          "time": "10:30:00",
+          "error": null
+        },
+        {
+          "platform": "Bluesky",
+          "status": "success",
+          "posted_url": "https://bsky.app/profile/did:plc:tester/post/abc123",
+          "public_access": true,
+          "date": "2026-11-15",
+          "time": "09:13:09",
+          "error": null
+        },
+        {
+          "platform": "DEV Community",
+          "status": "success",
+          "posted_url": "https://dev.to/tester/update-123",
+          "public_access": true,
+          "date": "2026-11-15",
+          "time": "10:30:00",
+          "error": null
+        },
+        {
+          "platform": "Telegram",
+          "status": "success",
+          "posted_url": "https://t.me/testchannel/42",
+          "public_access": true,
+          "date": "2026-11-15",
+          "time": "10:30:00",
+          "error": null
+        },
+        {
+          "platform": "Discord",
+          "status": "success",
+          "posted_url": "https://discord.com/channels/100000/200000/300000",
+          "public_access": false,
+          "date": "2026-11-15",
+          "time": "10:30:00",
+          "error": null
+        }
+      ]
+    },
+    "partial_failure": {
+      "success": true,
+      "results": [
+        {
+          "platform": "Mastodon",
+          "status": "success",
+          "posted_url": "https://mastodon.example/@tester/123",
+          "public_access": true,
+          "date": "2026-11-15",
+          "time": "10:30:00",
+          "error": null
+        },
+        {
+          "platform": "Bluesky",
+          "status": "success",
+          "posted_url": "https://bsky.app/profile/did:plc:tester/post/abc123",
+          "public_access": true,
+          "date": "2026-11-15",
+          "time": "09:13:09",
+          "error": null
+        },
+        {
+          "platform": "DEV Community",
+          "status": "success",
+          "posted_url": "https://dev.to/tester/update-123",
+          "public_access": true,
+          "date": "2026-11-15",
+          "time": "10:30:00",
+          "error": null
+        },
+        {
+          "platform": "Telegram",
+          "status": "success",
+          "posted_url": "https://t.me/testchannel/42",
+          "public_access": true,
+          "date": "2026-11-15",
+          "time": "10:30:00",
+          "error": null
+        },
+        {
+          "platform": "Discord",
+          "status": "failed",
+          "posted_url": null,
+          "public_access": false,
+          "date": null,
+          "time": null,
+          "error": "Platform rate limit exceeded (HTTP 429); retry later"
+        }
+      ]
+    }
+  }
+}
